@@ -153,8 +153,8 @@ if DEVELOPMENT_MODE is True:
 else:
     AWS_S3_ACCESS_KEY_ID = getenv('AWS_S3_ACCESS_KEY_ID')
     AWS_S3_SECRET_ACCESS_KEY = getenv('AWS_S3_SECRET_ACCESS_KEY')
-    AWS_STORAGE_BUCKET_NAME = getenv('AWS_S3_BUCKET_NAME')
-    AWS_S3_REGION_NAME = getenv('AWS_S3_REGION_NAME')
+    AWS_STORAGE_BUCKET_NAME = 'bbddocsbucket'
+    AWS_S3_REGION_NAME = 'eu-central-1'
     AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
     STATIC_URL = 'https://%s/' % AWS_S3_CUSTOM_DOMAIN
     MEDIA_URL = 'https://%s/media/' % AWS_S3_CUSTOM_DOMAIN
